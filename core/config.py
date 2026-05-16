@@ -23,6 +23,7 @@ class Settings(BaseSettings):
     embedding_model: str = "text-embedding-3-small"
 
     retrieval_mode: str = "hybrid"
+    rag_engine: str = "diy"
     hybrid_vector_weight: float = 0.7
     hybrid_bm25_weight: float = 0.3
     retrieval_min_score: float = 0.35

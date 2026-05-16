@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -45,6 +46,7 @@ class QueryRequest(BaseModel):
     top_k: int | None = Field(default=None, ge=1, le=20)
     domain: str | None = None
     lang: str | None = None
+    engine: Literal["diy", "langchain"] | None = None
 
 
 class SourceItem(BaseModel):
